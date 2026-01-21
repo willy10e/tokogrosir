@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Grosir Bang Iky</title>
+<link rel="stylesheet" href="grosir.css">
+</head>
+<body>
+
+<header>
+    <h1>Grosir Bang Iky</h1>
+</header>
+
+<div class="container">
+
+<!-- LOGIN & REGISTER -->
+<div id="auth" class="card">
+    <h3>Login / Daftar</h3>
+    <input type="text" id="username" placeholder="Username">
+    <input type="password" id="password" placeholder="Password">
+    <button onclick="register()">Daftar</button>
+    <button onclick="login()">Login</button>
+    <p id="authMsg"></p>
+</div>
+
+<!-- PRODUK -->
+<div id="produk" class="hidden">
+    <div class="card">
+        <h3>Gula 1 Kg</h3>
+        <p>Rp 15.000</p>
+        <button onclick="addCart('Gula 1 Kg',15000)">Tambah ke Keranjang</button>
+    </div>
+
+    <div class="card">
+        <h3>helium bolong</h3>
+        <p>Rp 20.000</p>
+        <button onclick="addCart('sebungkus',20000)">Tambah ke Keranjang</button>
+    </div>
+
+    <div class="card">
+        <h3>Beras 5 Kg</h3>
+        <p>Rp 65.000</p>
+        <button onclick="addCart('Beras 5 Kg',65000)">Tambah ke Keranjang</button>
+    </div>
+
+    <div class="card">
+        <h3>Minyak Goreng 2L</h3>
+        <p>Rp 32.000</p>
+        <button onclick="addCart('Minyak Goreng 2L',32000)">Tambah ke Keranjang</button>
+    </div>
+</div>
+
+</div>
+
+<!-- KERANJANG -->
+<div id="cart" class="hidden">
+    <h4>Keranjang</h4>
+    <ul id="cartItems"></ul>
+    <b>Total: Rp <span id="total">0</span></b>
+</div>
+
+<!-- CHATBOT -->
+<div id="chatbot" class="hidden">
+    <div id="chatBody">
+        <p><b>Bot:</b> Halo! Ketik <b>checkout</b> untuk pesan via WhatsApp</p>
+    </div>
+    <div class="chat-input">
+        <input type="text" id="userInput" placeholder="Ketik pesan...">
+        <button onclick="sendChat()">Kirim</button>
+    </div>
+</div>
+
+<script src="grosir.js"></script>
+</body>
+</html>
